@@ -1,10 +1,22 @@
-//
-// Created by visxim on 7/31/20.
-//
-
+/**********************************************************************************************************************
+ *  COPYRIGHT
+ *  -------------------------------------------------------------------------------------------------------------------
+ *
+ *  -------------------------------------------------------------------------------------------------------------------
+ *  FILE DESCRIPTION
+ *  -----------------------------------------------------------------------------------------------------------------*/
+/**        \file  /home/visxim/CLionProjects/DecentralizedDummyProcess/includes/JSON_manager.h
+ *        \brief  Header of JSON_manager for handling JSON data
+ *
+ *      \details The JSON_manager handels the interpretation and storage of the JSON data from
+ *               the given file
+ *
+ *********************************************************************************************************************/
 #ifndef DECENTRALIZEDDUMMYPROCESS_JSON_MANAGER_H
 #define DECENTRALIZEDDUMMYPROCESS_JSON_MANAGER_H
-
+/**********************************************************************************************************************
+ *  INCLUDES
+ *********************************************************************************************************************/
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -21,6 +33,9 @@ using namespace rapidjson;
 using namespace std;
 //using namespace boost::interprocess;
 
+/*!
+ * \brief JSON manager class for reading and parsing JSON data
+ */
 class JSON_manager{
 private:
     Document doc;
@@ -31,6 +46,5 @@ public:
     string get_json_config_string();
     unsigned int parseToStructandSerialize(string filename);
 };
-
 
 #endif //DECENTRALIZEDDUMMYPROCESS_JSON_MANAGER_H

@@ -70,6 +70,7 @@ string JSON_manager::get_json_config_string()
  * */
 unsigned int JSON_manager::parseToStructandSerialize(string filename)
 {
+    tracepoint(tp_provider, time_tracepoint, 1);
     //! compare the filename to find the right implementation
     if (!filename.compare("UMGR.json"))
     {
@@ -92,6 +93,8 @@ unsigned int JSON_manager::parseToStructandSerialize(string filename)
         data.msg_buf_size = doc["msg_buf_size"].GetUint();
 
         cout << "JSON-file transfered into struct." << endl;
+
+        tracepoint(tp_provider, time_tracepoint, 2);
 
         //!pass the config string, created from the struct to receive the checksum
         //data.checksum = CRC.createCRC(&data);

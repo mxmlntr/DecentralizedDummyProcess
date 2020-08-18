@@ -28,6 +28,7 @@
 */
 int main(int argc, char **argv)
 {
+    tracepoint(tp_provider, time_tracepoint, 0);
     file file1;
     file1.setfilename("UMGR.json");
     file1.callJSON();

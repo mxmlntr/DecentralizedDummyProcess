@@ -32,5 +32,6 @@ int main(int argc, char **argv)
     file file1;
     file1.setfilename("UMGR.json");
     file1.callJSON();
+
     return 0;
 }

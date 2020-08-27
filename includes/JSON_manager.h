@@ -26,13 +26,10 @@
 #include "document.h"
 #include "stringbuffer.h"
 #include "data_storage.h"
-//#include "serializer.h"
-//#include "checksum_manager.h"
 #include "time-tp.h"
 
 using namespace rapidjson;
 using namespace std;
-//using namespace boost::interprocess;
 
 /*!
  * \brief JSON manager class for reading and parsing JSON data
@@ -40,8 +37,6 @@ using namespace std;
 class JSON_manager{
 private:
     Document doc;
-//    serializer ser;
-//    checksum_manager CRC;
 public:
     unsigned int read_file(string filename);
     string get_json_config_string();
